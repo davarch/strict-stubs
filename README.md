@@ -35,4 +35,4 @@ composer test
 ```
 
 ## Credits
-### Inspired by [Davarch](https://github.com/Davarch/laravel-stubs)
+### Inspired by [spatie](https://github.com/spatie/laravel-stubs)
