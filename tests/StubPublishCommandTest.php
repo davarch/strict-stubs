@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Support\Facades\File;
+use function PHPUnit\Framework\assertFileEquals;
+
+it('can publish stubs', function (): void {
+    $targetStubsPath = $this->app->basePath('stubs');
+
+    File::deleteDirectory($targetStubsPath);
+
+    $this->artisan('davarch-stub:publish')->assertExitCode(0);
+
+    $stubPath = __DIR__.'/../stubs/migration.stub';
+
+    $publishedStubPath = $targetStubsPath.'/migration.stub';
+
+    assertFileEquals($stubPath, $publishedStubPath);
+});

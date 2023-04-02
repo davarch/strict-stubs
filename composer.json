@@ -1,0 +1,57 @@
+{
+    "name": "davarch/strict-stubs",
+    "description": "Strict stubs for Laravel",
+    "keywords": [
+        "laravel-stubs",
+        "strict"
+    ],
+    "homepage": "https://github.com/davarch/strict-stubs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tim Davarch",
+            "email": "tim@davarch.ru"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^10.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "mockery/mockery": "^1.4",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^2.1",
+        "roave/security-advisories": "dev-latest"
+    },
+    "autoload": {
+        "psr-4": {
+            "Davarch\\Stubs\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Davarch\\Stubs\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/pint",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Davarch\\Stubs\\StubsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
