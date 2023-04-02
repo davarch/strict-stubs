@@ -8,7 +8,7 @@
 ## Installation
 
 ```bash
-composer require Davarch/laravel-stubs --dev
+composer require davarch/strict-stubs --dev
 ```
 
 ## Usage
